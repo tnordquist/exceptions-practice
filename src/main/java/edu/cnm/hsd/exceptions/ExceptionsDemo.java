@@ -1,6 +1,7 @@
 package edu.cnm.hsd.exceptions;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class ExceptionsDemo {
 
@@ -16,11 +17,14 @@ public class ExceptionsDemo {
     System.out.println("\nInside share ...");
 
 
-    // try {
-    HttpConnect.send(0, "hello", "http://www.goodsnips.com");
-    /*
-     * } catch (FileNotFoundException e) { // TODO Auto-generated catch block e.printStackTrace(); }
-     */
+    try {
+      HttpConnect.send(1, "hello", "http://www.goodsnips.com");
+
+    } catch (FileNotFoundException e) {
+      throw e;
+    } catch (IOException e) {
+      System.out.println("Connecting to a different server ...");
+    }
 
     System.out.println("\nEnd of share ...");
   }
