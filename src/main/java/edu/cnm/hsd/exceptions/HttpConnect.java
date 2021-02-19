@@ -5,8 +5,7 @@ import java.io.IOException;
 
 public class HttpConnect {
 
-  public static void send(int destination, String data, String partner)
-      throws FileNotFoundException, IOException {
+  public static void send(int destination, String data, String partner) throws IOException {
     System.out.println("\nInside send ...");
     if (destination == 0) {
       throw new FileNotFoundException();
