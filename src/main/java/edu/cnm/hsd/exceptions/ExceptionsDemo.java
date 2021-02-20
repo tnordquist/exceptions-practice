@@ -18,7 +18,7 @@ public class ExceptionsDemo {
 
 
     try {
-      HttpConnect.send(0, "hello", "http://www.goodsnips.com");
+      HttpConnect.send(-1, "hello", "http://www.goodsnips.com");
 
     } /*
        * catch (FileNotFoundException e) { throw e; }
