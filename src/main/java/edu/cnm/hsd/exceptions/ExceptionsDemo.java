@@ -18,12 +18,14 @@ public class ExceptionsDemo {
 
 
     try {
-      HttpConnect.send(-1, "hello", "http://www.goodsnips.com");
-
-    } /*
-       * catch (FileNotFoundException e) { throw e; }
-       */ catch (IOException e) {
+      HttpConnect.send(1, "hello", "http://www.goodsnips.com");
+      System.out.println("After invoking send ...");
+    } catch (FileNotFoundException e) {
+      throw e;
+    } catch (IOException e) {
       System.out.println("Connecting to a different server ...");
+    } finally {
+      System.out.println("Inside share's finally ...");
     }
 
     System.out.println("\nEnd of share ...");

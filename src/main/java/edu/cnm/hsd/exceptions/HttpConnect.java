@@ -22,7 +22,7 @@ public class HttpConnect {
     if (destination == 0) {
       throw new FileNotFoundException();
     } else if (destination == 1) {
-      throw new IOException();
+      // throw new IOException();
     }
 
     System.out.println("\nEnd of send ...");
