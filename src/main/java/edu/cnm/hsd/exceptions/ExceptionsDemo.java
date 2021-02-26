@@ -34,11 +34,11 @@ public class ExceptionsDemo {
       System.out.println("Connecting to a different server ...");
     } catch (APIFormatChangeException e) {
       // Item 65: Don’t ignore exceptions
-      e.printStackTrace();
+      // e.printStackTrace();
 
       // Item 63: Include failure-capture information in detail messages
       // System.out.println("e.toString(): " + e);
-      // System.out.println("e.getMessage(): " + e.getMessage());
+      System.out.println("e.getMessage(): " + e.getMessage());
 
       // Item 63
       // System.out.println("e.getElementName(): " + e.getElementName());

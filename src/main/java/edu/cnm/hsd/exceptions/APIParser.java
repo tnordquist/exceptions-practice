@@ -15,7 +15,8 @@ public class APIParser {
       }
     } catch (NumberFormatException e) {
       // e.printStackTrace();
-      throw new APIFormatChangeException();
+      throw new APIFormatChangeException(
+          "Response: " + response + ", Element: code, Partner: " + partner);
     }
 
     return responseCode;
